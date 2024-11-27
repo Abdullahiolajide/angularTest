@@ -57,7 +57,7 @@ export class DashboardComponent {
   addMoney(){
     const amount = prompt("amount")
     if (amount) {
-      const newBal = this.accountBalance - parseInt(amount)
+      const newBal = this.accountBalance + parseInt(amount)
       this.accountBalance = newBal
     }else{
 
