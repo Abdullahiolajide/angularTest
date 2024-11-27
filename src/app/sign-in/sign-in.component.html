@@ -1,0 +1,8 @@
+<div class="container">
+    <form action="" class="form col-5 mx-auto shadow p-3">
+        <h1>Sign In</h1>
+        <input type="text" class="form-control my-2" [(ngModel)]="email" name="email" placeholder="Email">
+        <input type="text" class="form-control my-2" [(ngModel)]="password" name="password" placeholder="Password">
+        <input type="submit" class="form-control my-2 btn btn-primary" (click)="signIn()" >
+    </form>
+</div>

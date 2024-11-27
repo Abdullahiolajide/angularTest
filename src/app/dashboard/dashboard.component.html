@@ -1,0 +1,60 @@
+
+<div class="d-flex">
+    <div class="container mx-3">
+        <div class="col-7 p-3 shadow" style="height: 200px;">
+            <h4>Balance</h4>
+            <div class="text-center"><h5>${{accountBalance}}</h5></div>
+            <button class="container btn btn-primary" (click)="addMoney()">Add More</button>
+        </div>
+    </div>
+    <div class="container mx-3">
+        <div class="col-7 p-3 shadow" style="height: 200px;">
+            <h4>Add Your 4 digit PIN</h4>
+            <div class="text-center mx-2"><h6>To be Able to transfer Funds Ypu need  PIN</h6></div>
+            <button class="container btn btn-primary mt-3" (click)="createPin()">Create/change Pin</button>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="col-3 p-3 border" style="height: 200px;">
+        <h4>Transfer Funds</h4>
+        <div class="text-center"><h5>${{accountBalance}}</h5></div>
+        <button class="container btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Transfer Funds</button>
+    </div>
+</div>
+
+<!-- <div class="container">
+    <div class="col-8 shadow">
+        <div>First Name: {{userDetails.firstname}}</div>
+        <div>Last Name: {{userDetails.lastname}}</div>
+        <div>Email: {{userDetails.email}}</div>
+        <div>Accout Number: {{userDetails.accountNumber}}</div>
+    </div>
+</div> -->
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    Launch static backdrop modal
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+         <input type="number" class="form-control my-2" placeholder="recepient account Number" [(ngModel)]="rAccountNumber">
+         <input type="text" class="form-control my-2" placeholder="Account Name" [(ngModel)]="AccountName">
+         <input type="text" class="form-control my-2" placeholder="Amount" [(ngModel)]="amount">
+         <input type="text" class="form-control my-2" placeholder="PIN" [(ngModel)]="pin">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="transfer()">Transfer</button>
+        </div>
+      </div>
+    </div>
+  </div>
