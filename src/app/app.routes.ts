@@ -4,7 +4,7 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 export const routes: Routes = [
-    {path:'signup', component:SignUpComponent},
+    {path:'/', component:SignUpComponent},
     {path:'signin', component:SignInComponent},
     {path:'dashboard', component:DashboardComponent},
 ];
